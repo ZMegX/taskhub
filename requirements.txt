@@ -1,0 +1,9 @@
+django
+psycopg
+django-crispy-forms
+crispy-bootstrap5
+Pillow
+dj-database-url
+whitenoise
+gunicorn 
+coverage
