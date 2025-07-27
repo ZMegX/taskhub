@@ -22,3 +22,7 @@ class ProfileUpdateForm(forms.ModelForm):
   class Meta:
     model = Profile 
     fields = ['image']    
+
+class CustomUserCreationForm(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
+        fields = UserCreationForm.Meta.fields + ("email",)
