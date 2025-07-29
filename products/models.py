@@ -10,6 +10,9 @@ class Tour(models.Model):
     location = models.CharField(max_length=255, default="no location", null=False)
     created_at = models.DateTimeField(default=timezone.now)
 
+    def __str__(self):
+        return self.title
+
 class Request(models.Model):
     STATUS_CHOICES = [
         ('ongoing', 'Ongoing'),

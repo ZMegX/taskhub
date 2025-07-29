@@ -4,7 +4,7 @@ from .forms import RequestForm
 
 def tour_list(request):
     tours = Tour.objects.all()
-    return render(request, 'templates/tour_list.html', {'tours': tours})
+    return render(request, 'products/tour_list.html', {'tours': tours})
 
 def make_request(request, tour_id):
     tour = get_object_or_404(Tour, id=tour_id)
