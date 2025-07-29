@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+<h1>Available Tours</h1>
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    {% for tour in tours %}
+    <div style="border: 1px solid #ccc; padding: 20px; width: 300px;">
+        <h2>{{ tour.title }}</h2>
+        <p>{{ tour.description|truncatewords:20 }}</p>
+        <p><strong>Price:</strong> €{{ tour.price }}</p>
+        <a href="{% url 'make_request' tour.id %}">
+            <button>Request This Tour</button>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
